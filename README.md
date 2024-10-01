@@ -78,8 +78,8 @@
 
 2. 在OpenWrt系统主页点击“文件管理”，进入 `/tmp` 目录，上传下载好的 `dialer.tar`。
 
-<img src="https://github.com/user-attachments/assets/e639c74a-c97e-4b8b-ab20-44c4b4a5309e" width="500px">
-<img src="https://github.com/user-attachments/assets/38d42459-a4df-4c08-96a1-c5c58d998423" width="500px">
+<img src="https://github.com/user-attachments/assets/e639c74a-c97e-4b8b-ab20-44c4b4a5309e" width="700px">
+<img src="https://github.com/user-attachments/assets/38d42459-a4df-4c08-96a1-c5c58d998423" width="700px">
 
 
 4. 返回主页，点击“服务” -> “终端”，输入账号 `root` 和密码，连接到终端。
