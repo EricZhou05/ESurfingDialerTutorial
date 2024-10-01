@@ -134,29 +134,29 @@
    > **注意**：Windows 和 Linux 的换行符不同，可能会导致脚本错误，详细请查看 [换行符问题解决方案](https://blog.csdn.net/hyj_king/article/details/120301359)。
 
 
-7. 将 `Dockerfile`、`run.sh` 和 `client.jar` 放入同一个没有中文路径的文件夹中。
+6. 将 `Dockerfile`、`run.sh` 和 `client.jar` 放入同一个没有中文路径的文件夹中。
 
-8. 在文件夹内按住 Shift 键并右键选择“在此处打开 PowerShell 窗口”，粘贴以下命令构建 Docker 容器：
+7. 在文件夹内按住 Shift 键并右键选择“在此处打开 PowerShell 窗口”，粘贴以下命令构建 Docker 容器：
 
    ```bash
    docker build -t dialer .
    ```
 
-9. 构建完成后，粘贴以下命令导出镜像：
+8. 构建完成后，粘贴以下命令导出镜像：
 
    ```bash
    docker save -o dialer.tar dialer
    ```
 
-10. 上传 `dialer.tar` 文件至软路由 `/tmp` 目录。
+9. 上传 `dialer.tar` 文件至软路由 `/tmp` 目录。
 
-11. 在软路由终端中粘贴以下命令加载镜像：
+10. 在软路由终端中粘贴以下命令加载镜像：
 
     ```bash
     docker load -i /tmp/dialer.tar
     ```
 
-12. 最后粘贴以下命令运行容器：
+11. 最后粘贴以下命令运行容器：
 
     ```bash
     docker run -itd -e DIALER_USER=<用户名/手机号> -e DIALER_PASSWORD=<密码> --name dialer-client --network host --restart=always dialer
@@ -164,7 +164,7 @@
 
     > **注意**：将 `<用户名/手机号>` 和 `<密码>` 替换为你的信息。
 
-13. 使用以下命令查看容器日志，检查运行状态：
+12. 使用以下命令查看容器日志，检查运行状态：
 
     ```bash
     docker logs -f dialer-client
