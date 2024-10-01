@@ -2,7 +2,7 @@
 
 ![GitHub License](https://img.shields.io/github/license/EricZhou05/ESurfingDialerTutorial)
 
-借助第三方 [广东电信天翼校园（ZSM验证）登入认证客户端](https://github.com/Rsplwe/ESurfingDialer)，实现自动认证联网的效果。配合软路由 Docker 部署可实现多设备共享。脚本作者教程比较简略难懂，自己一步步摸索过来的，提供给后面的学弟学妹，希望能让大家少走一些弯路。
+借助第三方 [广东电信天翼校园（ZSM验证）登入认证客户端](https://github.com/Rsplwe/ESurfingDialer)，实现自动认证联网的效果。配合软路由 Docker 部署可实现多设备共享。脚本原作者的说明比较简略难懂，下面的教程是自己一步步摸索过来的，提供给后面的学弟学妹，希望能让大家少走一些弯路。
 
 ## 运行环境
 
@@ -44,6 +44,8 @@
 
    > [Windows 任务计划程序（task scheduler）介绍](https://blog.csdn.net/glenshappy/article/details/128567122)
 
+<img src="https://github.com/user-attachments/assets/0250045a-577b-4e9e-aaea-2300434b3457" width="700px">
+
 
 ### OpenWrt 部署（支持多设备共享）
 
@@ -76,15 +78,21 @@
 
 2. 在OpenWrt系统主页点击“文件管理”，进入 `/tmp` 目录，上传下载好的 `dialer.tar`。
 
-3. 返回主页，点击“服务” -> “终端”，输入账号 `root` 和密码，连接到终端。
+<img src="https://github.com/user-attachments/assets/e639c74a-c97e-4b8b-ab20-44c4b4a5309e" width="500px">
+<img src="https://github.com/user-attachments/assets/38d42459-a4df-4c08-96a1-c5c58d998423" width="500px">
 
-4. 在终端中粘贴以下命令，加载 Docker 镜像：
+
+4. 返回主页，点击“服务” -> “终端”，输入账号 `root` 和密码，连接到终端。
+
+<img src="https://github.com/user-attachments/assets/bb4fbd89-bb3e-4bed-b387-ca1d519e46f1" width="700px">
+
+5. 在终端中粘贴以下命令，加载 Docker 镜像：
 
    ```bash
    docker load -i /tmp/dialer.tar
    ```
 
-5. 镜像创建完成后，粘贴以下命令运行容器：
+6. 镜像创建完成后，粘贴以下命令运行容器：
 
    ```bash
    docker run -itd -e DIALER_USER=<用户名/手机号> -e DIALER_PASSWORD=<密码> --name dialer-client --network host --restart=always dialer
@@ -92,7 +100,7 @@
 
    > **注意**：将 `<用户名/手机号>` 和 `<密码>` 替换为你的信息。
 
-6. 输入以下命令查看容器日志，检查运行状态：
+7. 输入以下命令查看容器日志，检查运行状态：
 
    ```bash
    docker logs -f dialer-client
@@ -137,6 +145,8 @@
 
 7. 在文件夹内按住 Shift 键并右键选择“在此处打开 PowerShell 窗口”，粘贴以下命令构建 Docker 容器：
 
+<img src="https://github.com/user-attachments/assets/63a4cc26-fbe7-4c65-9efe-a06dd4acfbef" width="700px">
+
    ```bash
    docker build -t dialer .
    ```
@@ -146,6 +156,8 @@
    ```bash
    docker save -o dialer.tar dialer
    ```
+
+<img src="https://github.com/user-attachments/assets/fb18ea64-dfbb-40ce-b2d5-01c4ef8f6893" width="700px">
 
 9. 上传 `dialer.tar` 文件至软路由 `/tmp` 目录。
 
@@ -176,3 +188,6 @@
     ```
 #### 4. 部署Wifi
 购买一个千兆普通路由器，将wan口连接软路由的lan口，然后将上网方式改为DHCP，就可以开Wifi多设备使用啦！
+
+![PixPin_2024-10-01_13-59-33](https://github.com/user-attachments/assets/83405303-641e-443d-9063-86f93cdadd8d)
+
