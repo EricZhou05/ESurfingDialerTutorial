@@ -1,4 +1,5 @@
 # 广东电信天翼校园网自动认证教程
+---
 
 ![GitHub License](https://img.shields.io/github/license/EricZhou05/ESurfingDialerTutorial)
 
@@ -12,6 +13,7 @@
 - **内存 ≥ 200M**
 
 ## 使用教程
+---
 
 ### Windows 部署
 
