@@ -200,3 +200,68 @@
 
 ![PixPin_2024-10-01_13-59-33](https://github.com/user-attachments/assets/83405303-641e-443d-9063-86f93cdadd8d)
 
+
+## 进阶
+
+针对 [issues](https://github.com/Rsplwe/ESurfingDialer/issues) 里面提到的常见问题：
+
+- [发不出心跳包导致断网](https://github.com/Rsplwe/ESurfingDialer/issues/68)
+- [登录后连通性测试报错](https://github.com/Rsplwe/ESurfingDialer/issues/54)
+- [运营商定时发起断网操作](https://github.com/Rsplwe/ESurfingDialer/issues/40)
+
+提供一个**解决方案**，通过增加计划任务，定期检查网络连接情况，若发现断网则自动重启路由器。具体操作步骤如下：
+
+### 1. 新建一个文档，粘贴以下内容：
+
+```bash
+#!/bin/sh
+tries=0
+logger "my network watchdog start"
+while [[ $tries -lt 5 ]]
+do
+        if /bin/ping -c 1 223.5.5.5 >/dev/null
+        then
+            logger "network pass, exit."
+            exit 0
+        fi
+        tries=$((tries+1))
+        sleep 10
+done
+logger "network error, restart network"
+reboot
+```
+
+> **注释**：
+> - `223.5.5.5` 是阿里的 **DNS** 服务器，用于检测是否断网。
+> - 代码会每隔 **10秒** 检测一次网络连接，若连续 **5次** 检测都无法联网，则自动重启路由器。
+
+将文件保存并命名为 **AutoReboot.sh**。
+
+<img src="https://github.com/user-attachments/assets/49e78c95-4278-496a-a9fb-9107d69e788d" width="700px">
+
+### 2. 上传文件到软路由的 `/root` 文件夹内。
+
+### 3. 打开软路由终端，粘贴以下代码并回车给脚本赋予最高运行权限：
+
+```bash
+chmod 777 /root/AutoReboot.sh
+```
+
+<img src="https://github.com/user-attachments/assets/b6915874-c08c-40bb-a5d3-b5ba2f198675" width="700px">
+
+### 4. 回到软路由主页，依次进入 **系统** -> **计划任务**，粘贴以下代码：
+
+```bash
+# 每10分钟自动检查网络连接，失败则重启
+*/10 * * * * sh /root/AutoReboot.sh
+```
+
+<img src="https://github.com/user-attachments/assets/5121cce9-3691-45b2-97a0-35af00d08fe1" width="700px">
+
+### 5. 重启软路由生效。
+
+### 6. 脚本的执行情况可以在 **状态** -> **系统日志** 中找到。
+
+> **提示**：可以通过搜索关键词 `user.notice root` 来检查脚本的运行情况。
+
+<img src="https://github.com/user-attachments/assets/c01d9135-591b-4c43-b287-393d660715a6" width="700px">
