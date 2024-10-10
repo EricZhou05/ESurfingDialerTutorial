@@ -235,7 +235,7 @@ reboot
 > - `223.5.5.5` 是阿里的 **DNS** 服务器，用于检测是否断网。
 > - 代码会每隔 **10秒** 检测一次网络连接，若连续 **5次** 检测都无法联网，则自动重启路由器。
 
-将文件保存并命名为 **AutoReboot.sh**。
+将文件保存并重命名为 **AutoReboot.sh**。
 
 <img src="https://github.com/user-attachments/assets/49e78c95-4278-496a-a9fb-9107d69e788d" width="700px">
 
