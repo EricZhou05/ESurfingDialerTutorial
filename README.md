@@ -24,11 +24,18 @@
 
 ### Windows 部署
 
-#### 1. 安装 Java 21 并配置环境
+#### 方法一：解压即用版（主脚本可能非最新）
+
+见另一位开发者项目
+[ESurfingDialer-onekey](https://github.com/6DDUU6/ESurfingDialer-onekey)
+
+#### 方法二：自行部署版（主脚本为最新）
+
+##### 1. 安装 Java 21 并配置环境
 
 > [Java官网下载 JDK21 版本详细教程（下载、安装、环境变量配置）](https://blog.csdn.net/Du_XiaoNan/article/details/137373260)
 
-#### 2. 运行程序
+##### 2. 运行程序
 
 1. 下载发行版并重命名为 `client.jar`。
 
