@@ -149,7 +149,7 @@
    ```
    > **注意**：Windows 和 Linux 的换行符不同，可能会导致脚本错误，详细请查看 [换行符问题解决方案](https://blog.csdn.net/hyj_king/article/details/120301359)。
 
-   > 在实操中相较原作者的代码增加了 `RUN chmod +x /app/run.sh`，防止脚本由于权限不足而无法执行。
+   > 在实际测试中，相较原作者的代码，咱增加了 `RUN chmod +x /app/run.sh`，防止脚本由于权限不足而无法执行。
 5. 创建 `run.sh` 文件，输入以下内容：
 
    ```bash
