@@ -89,7 +89,7 @@
 
 进入 OpenWrt 系统后，即可部署 Docker 镜像并创建容器。
 
-##### 方法一：使用现成的 Docker 镜像
+##### 方法一：使用现成的 Docker 镜像（可能非最新）
 
 1. 下载我打包好的镜像文件（版本：ESurfingDialer-1.7.0-all）：[下载链接](https://pan.quark.cn/s/3b5473c01149)
 
@@ -129,7 +129,7 @@
    INFO [com.rsplwe.esurfing.Client] (Client:82) - The login has been authorized.
    ```
 
-##### 方法二：自行打包 Docker 镜像
+##### 方法二：自行打包 Docker 镜像（脚本为最新）
 
 1. 在电脑上搭建 Docker 环境，运行 Docker Desktop 应用。
 
@@ -149,6 +149,7 @@
    ```
    > **注意**：Windows 和 Linux 的换行符不同，可能会导致脚本错误，详细请查看 [换行符问题解决方案](https://blog.csdn.net/hyj_king/article/details/120301359)。
 
+   > 在实操中相较原作者的代码增加了 `RUN chmod +x /app/run.sh`，防止脚本由于权限不足而无法执行。
 5. 创建 `run.sh` 文件，输入以下内容：
 
    ```bash
