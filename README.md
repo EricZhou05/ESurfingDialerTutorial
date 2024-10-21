@@ -53,7 +53,7 @@
 <img src="https://github.com/user-attachments/assets/0250045a-577b-4e9e-aaea-2300434b3457" width="700px">
 
 
-### OpenWrt 部署（支持多设备共享）
+### OpenWrt 部署（支持多设备共享）[现可一键完成部署](https://github.com/dogliu666/ESurfingDialer-For-Docker)
 
 #### 1. 购置软路由
 
