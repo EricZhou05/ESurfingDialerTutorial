@@ -10,7 +10,7 @@
 - **glibc** (仅限 Linux)
 - **内存 ≥ 200M**
 
-# 提供两种验证方式 [Windows](https://github.com/dogliu666/ESurfingDialer-For-OpenWrt/tree/main?tab=readme-ov-file#windows-%E9%83%A8%E7%BD%B2) 和 [OpenWrt](https://github.com/dogliu666/ESurfingDialer-For-OpenWrt/edit/main/README.md#openwrt-%E9%83%A8%E7%BD%B2%E6%94%AF%E6%8C%81%E5%A4%9A%E8%AE%BE%E5%A4%87%E5%85%B1%E4%BA%AB%E5%8F%AF%E4%BD%BF%E7%94%A8%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC%E5%AE%8C%E6%88%90%E9%83%A8%E7%BD%B2)
+# 提供两种验证方式 [Windows](https://github.com/dogliu666/ESurfingDialer-For-OpenWrt/tree/main?tab=readme-ov-file#windows-%E9%83%A8%E7%BD%B2) 和 [OpenWrt](https://github.com/dogliu666/ESurfingDialer-For-OpenWrt/?tab=readme-ov-file#openwrt-%E9%83%A8%E7%BD%B2%E6%94%AF%E6%8C%81%E5%A4%9A%E8%AE%BE%E5%A4%87%E5%85%B1%E4%BA%AB%E5%8F%AF%E4%BD%BF%E7%94%A8%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC%E5%AE%8C%E6%88%90%E9%83%A8%E7%BD%B2)
 ## 使用教程
 
 ### Windows 部署
