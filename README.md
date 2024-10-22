@@ -80,7 +80,7 @@
 
 ##### 方法一：使用现成的 Docker 镜像（可能非最新）
 
-1. 下载我打包好的镜像文件（版本：ESurfingDialer-1.7.0-all）：[下载链接](https://pan.quark.cn/s/3b5473c01149)
+1. 下载我打包好的镜像文件（版本：ESurfingDialer-1.7.0-all）：[下载链接](https://ericzhou05-my.sharepoint.com/:u:/g/personal/01_ericzhou05_onmicrosoft_com/EdlYYnU9RgdPlPDAyMF_UEoBgpV5ViiJEGbKHvx7MiDUNQ?e=GXQ3Pb)
 
 2. 在OpenWrt系统主页点击“文件管理”，进入 `/tmp` 目录，上传下载好的 `dialer.tar`。
 
