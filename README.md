@@ -7,24 +7,29 @@
 欢迎Fork then Pull 一起共建仓库~
 
 ## 运行环境
-- **Java 21 及以上**
+- **Java 23 及以上**
 - **x86_64** 或 **ARMv8** 架构
 - **glibc** (仅限 Linux)
 - **内存 ≥ 200M**
 
 # 提供两种验证方式 [Windows](https://github.com/dogliu666/ESurfingDialer-For-OpenWrt/tree/main?tab=readme-ov-file#windows-%E9%83%A8%E7%BD%B2) 和 [OpenWrt](https://github.com/dogliu666/ESurfingDialer-For-OpenWrt/?tab=readme-ov-file#openwrt-%E9%83%A8%E7%BD%B2%E6%94%AF%E6%8C%81%E5%A4%9A%E8%AE%BE%E5%A4%87%E5%85%B1%E4%BA%AB%E5%8F%AF%E4%BD%BF%E7%94%A8%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC%E5%AE%8C%E6%88%90%E9%83%A8%E7%BD%B2)
+
+---
+
 ## 使用教程
 
-### Windows 部署
+# Windows 部署
 
-#### 方法一：解压即用版（主脚本可能非最新）
+## 方法一：解压即用版
 
-见另一位开发者项目
+#### 见另一位开发者项目
 [ESurfingDialer-onekey](https://github.com/6DDUU6/ESurfingDialer-onekey)
 
-#### 方法二：自行部署版（主脚本为最新）
+---
 
-##### 1. 安装 Java 21 并配置环境
+## 方法二：自行部署版（主脚本为最新）
+
+##### 1. 安装 Java 23 并配置环境
 
 > [Java官网下载 JDK21 版本详细教程（下载、安装、环境变量配置）](https://blog.csdn.net/Du_XiaoNan/article/details/137373260)
 
@@ -55,8 +60,9 @@
 
 <img src="https://github.com/user-attachments/assets/0250045a-577b-4e9e-aaea-2300434b3457" width="700px">
 
+---
 
-### OpenWrt 部署（支持多设备共享）[可使用一键脚本完成部署](https://github.com/dogliu666/ESurfingDialer-For-Docker)
+# OpenWrt 部署（支持多设备共享）[可使用一键脚本完成部署](https://github.com/dogliu666/ESurfingDialer-For-Docker)
 
 #### 1. 购置软路由
 
@@ -81,7 +87,7 @@
 
 进入 OpenWrt 系统后，即可部署 Docker 镜像并创建容器。
 
-##### 方法一：使用现成的 Docker 镜像（可能非最新）
+##### 方法一：使用现成的 Docker 镜像
 
 1. 下载我打包好的镜像文件（版本：ESurfingDialer-1.7.0-all）：[下载链接](https://ericzhou05-my.sharepoint.com/:u:/g/personal/01_ericzhou05_onmicrosoft_com/EdlYYnU9RgdPlPDAyMF_UEoBgpV5ViiJEGbKHvx7MiDUNQ?e=GXQ3Pb)
 
