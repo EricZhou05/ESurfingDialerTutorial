@@ -31,15 +31,16 @@
 
 ##### 1. 安装 Java 23 并配置环境
 
-> [Java23下载地址](https://www.oracle.com/hk/java/technologies/downloads/#jdk23-windows)
+   > [Java23下载地址](https://www.oracle.com/hk/java/technologies/downloads/#jdk23-windows)
 
 ##### 2. 运行程序
 
-1. 下载`ESurfingDialer-1.8.0-all.jar`并重命名为 `client.jar`。
+   1. 下载`ESurfingDialer-1.8.0-all.jar`并重命名为 `client.jar`。
 
    > [ESurfingDialer 发行版](https://github.com/Rsplwe/ESurfingDialer/releases)
 
-2. 新建记事本，填入以下代码，保存后重命名为“校园网自动登陆.bat”。
+
+   2. 新建记事本，填入以下代码，保存后重命名为“校园网自动登陆.bat”。
 
    > **注意**：将 `<用户名/手机号>` 和 `<密码>` 替换为你自己的！
 
@@ -50,11 +51,14 @@
    pause
    ```
 
-3. 在 D 盘新建 Log in 文件夹，并将 `client.jar` 和 `校园网自动登陆.bat` 放入该文件夹中。
 
-4. 关闭所有杀毒软件或将脚本设置为白名单，双击 `校园网自动登陆.bat` 运行。
+   3. 在 D 盘新建 Log in 文件夹，并将 `client.jar` 和 `校园网自动登陆.bat` 放入该文件夹中。
 
-5. （进阶）通过计划任务设置开机自启动。
+
+   4. 关闭所有杀毒软件或将脚本设置为白名单，双击 `校园网自动登陆.bat` 运行。
+
+
+   5. （进阶）通过计划任务设置开机自启动。
 
    > [Windows 任务计划程序（task scheduler）介绍](https://blog.csdn.net/glenshappy/article/details/128567122)
 
@@ -89,9 +93,9 @@
 
 ##### 方法一：使用现成的 Docker 镜像
 
-1. 下载我打包好的镜像文件（版本：ESurfingDialer-1.7.0-all）：[下载链接](https://ericzhou05-my.sharepoint.com/:u:/g/personal/01_ericzhou05_onmicrosoft_com/EdlYYnU9RgdPlPDAyMF_UEoBgpV5ViiJEGbKHvx7MiDUNQ?e=GXQ3Pb)
+   1. 下载我打包好的镜像文件（版本：ESurfingDialer-1.7.0-all）：[下载链接](https://ericzhou05-my.sharepoint.com/:u:/g/personal/01_ericzhou05_onmicrosoft_com/EdlYYnU9RgdPlPDAyMF_UEoBgpV5ViiJEGbKHvx7MiDUNQ?e=GXQ3Pb)
 
-2. 在OpenWrt系统主页点击“文件管理”，进入 `/tmp` 目录，上传下载好的 `dialer.tar`。
+   2. 在OpenWrt系统主页点击“文件管理”，进入 `/tmp` 目录，上传下载好的 `dialer.tar`。
 
 <img src="https://github.com/user-attachments/assets/e639c74a-c97e-4b8b-ab20-44c4b4a5309e" width="700px">
 <img src="https://github.com/user-attachments/assets/38d42459-a4df-4c08-96a1-c5c58d998423" width="700px">
@@ -138,7 +142,7 @@
 4. 创建 Dockerfile 文件，输入以下内容：
 
    ```dockerfile
-   FROM openjdk:21
+   FROM openjdk:23
    WORKDIR /app
    COPY run.sh /app
    COPY client.jar /app
