@@ -31,11 +31,11 @@
 
 ##### 1. 安装 Java 23 并配置环境
 
-> [Java官网下载 JDK21 版本详细教程（下载、安装、环境变量配置）](https://blog.csdn.net/Du_XiaoNan/article/details/137373260)
+> [Java23下载地址](https://www.oracle.com/hk/java/technologies/downloads/#jdk23-windows)
 
 ##### 2. 运行程序
 
-1. 下载发行版并重命名为 `client.jar`。
+1. 下载`ESurfingDialer-1.8.0-all.jar`并重命名为 `client.jar`。
 
    > [ESurfingDialer 发行版](https://github.com/Rsplwe/ESurfingDialer/releases)
 
