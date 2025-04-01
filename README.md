@@ -7,7 +7,7 @@
 欢迎Fork then Pull 一起共建仓库~
 
 ## 运行环境
-- **Java 21 及以上**
+- **Java 23 及以上**
 - **x86_64** 或 **ARMv8** 架构
 - **glibc** (仅限 Linux)
 - **内存 ≥ 200M**
@@ -23,9 +23,10 @@
 
 #### 方法二：自行部署版（主脚本为最新）
 
-##### 1. 安装 Java 21 并配置环境
+##### 1. 安装 Java 23 并配置环境
 
 > [Java官网下载 JDK21 版本详细教程（下载、安装、环境变量配置）](https://blog.csdn.net/Du_XiaoNan/article/details/137373260)
+（Java 23同理）
 
 ##### 2. 运行程序
 
@@ -80,47 +81,12 @@
 
 进入 OpenWrt 系统后，即可部署 Docker 镜像并创建容器。
 
-##### 方法一：使用现成的 Docker 镜像（可能非最新）
+##### 方法一：脚本自动部署
 
-1. 下载我打包好的镜像文件（版本：ESurfingDialer-1.8.0-all）：[下载链接](https://ericzhou05-my.sharepoint.com/:u:/g/personal/01_ericzhou05_onmicrosoft_com/EWU448kwtGtKi-n5JUeQIn0B5grT0fXvXcC313Erp7cu7A?e=LzF9zR)
+见另一位开发者项目
+[ESurfingDialer-For-Docker](https://github.com/dogliu666/ESurfingDialer-For-Docker)
 
-2. 在OpenWrt系统主页点击“文件管理”，进入 `/tmp` 目录，上传下载好的 `dialer.tar`。
-
-<img src="https://github.com/user-attachments/assets/e639c74a-c97e-4b8b-ab20-44c4b4a5309e" width="700px">
-<img src="https://github.com/user-attachments/assets/38d42459-a4df-4c08-96a1-c5c58d998423" width="700px">
-
-
-4. 返回主页，点击“服务” -> “终端”，输入账号 `root` 和密码，连接到终端。
-
-<img src="https://github.com/user-attachments/assets/bb4fbd89-bb3e-4bed-b387-ca1d519e46f1" width="700px">
-
-5. 在终端中粘贴以下命令，加载 Docker 镜像：
-
-   ```bash
-   docker load -i /tmp/dialer.tar
-   ```
-
-6. 镜像创建完成后，粘贴以下命令运行容器：
-
-   ```bash
-   docker run -itd -e DIALER_USER=<用户名/手机号> -e DIALER_PASSWORD=<密码> --name dialer-client --network host --restart=always dialer
-   ```
-
-   > **注意**：将 `<用户名/手机号>` 和 `<密码>` 替换为你的信息。
-
-7. 输入以下命令查看容器日志，检查运行状态：
-
-   ```bash
-   docker logs -f dialer-client
-   ```
-
-   如果输出以下信息，则表示部署成功：
-
-   ```
-   INFO [com.rsplwe.esurfing.Client] (Client:82) - The login has been authorized.
-   ```
-
-##### 方法二：自行打包 Docker 镜像（脚本为最新）
+##### 方法二：自行打包 Docker 镜像
 
 1. 在电脑上搭建 Docker 环境，运行 Docker Desktop 应用。
 
@@ -131,7 +97,8 @@
 4. 创建 Dockerfile 文件，输入以下内容：
 
    ```dockerfile
-   FROM openjdk:21
+   
+   FROM amazoncorretto:23
    WORKDIR /app
    COPY run.sh /app
    COPY client.jar /app
