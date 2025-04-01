@@ -97,7 +97,6 @@
 4. 创建 Dockerfile 文件，输入以下内容：
 
    ```dockerfile
-   
    FROM amazoncorretto:23
    WORKDIR /app
    COPY run.sh /app
