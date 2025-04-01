@@ -120,11 +120,11 @@
 
 7. 在文件夹内按住 Shift 键并右键选择“在此处打开 PowerShell 窗口”，粘贴以下命令构建 Docker 容器：
 
-<img src="https://github.com/user-attachments/assets/63a4cc26-fbe7-4c65-9efe-a06dd4acfbef" width="700px">
-
    ```bash
    docker build -t dialer .
    ```
+
+<img src="https://github.com/user-attachments/assets/63a4cc26-fbe7-4c65-9efe-a06dd4acfbef" width="700px">
 
 8. 构建完成后，粘贴以下命令导出镜像：
 
