@@ -36,12 +36,12 @@
 
 2. 新建记事本，填入以下代码，保存后重命名为“校园网自动登陆.bat”。
 
-   > **注意**：将 `<用户名/手机号>` 和 `<密码>` 替换为你自己的！
+   > **注意**：将 `用户名/手机号` 和 `密码` 替换为你自己的！
 
    ```bash
    @echo off
    cd D:\Log in
-   java -jar client.jar -u <用户名/手机号> -p <密码>
+   java -jar client.jar -u 用户名/手机号 -p 密码
    pause
    ```
 
@@ -145,10 +145,10 @@
 11. 最后粘贴以下命令运行容器：
 
     ```bash
-    docker run -itd -e DIALER_USER=<用户名/手机号> -e DIALER_PASSWORD=<密码> --name dialer-client --network host --restart=always dialer
+    docker run -itd -e DIALER_USER=用户名/手机号 -e DIALER_PASSWORD=密码 --name dialer-client --network host --restart=always dialer
     ```
 
-    > **注意**：将 `<用户名/手机号>` 和 `<密码>` 替换为你的信息。
+    > **注意**：将 `用户名/手机号` 和 `密码` 替换为你的信息。
 
 12. 使用以下命令查看容器日志，检查运行状态：
 
