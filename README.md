@@ -89,7 +89,7 @@
 
 2. 参考此视频的 4:30 - 6:15 分钟：[打包镜像视频](https://www.bilibili.com/video/BV1ai421S7zj)
 
-3. 下载原脚本并重命名为 `client.jar`：[原脚本下载链接](https://github.com/Rsplwe/ESurfingDialer/releases)
+3. 下载原客户端程序并重命名为 `client.jar`：[原程序下载链接](https://github.com/Rsplwe/ESurfingDialer/releases)
 
 4. 创建 Dockerfile 文件，输入以下内容：
 
