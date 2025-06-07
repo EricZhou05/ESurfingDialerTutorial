@@ -1,6 +1,6 @@
 # 广东电信天翼校园网自动认证教程
 
-![GitHub License]()
+![GitHub License](https://img.shields.io/github/license/EricZhou05/ESurfingDialerTutorial)
 
 借助第三方 [广东电信天翼校园（ZSM验证）登入认证客户端](https://github.com/Rsplwe/ESurfingDialer)，实现自动认证联网的效果。配合软路由 Docker 部署可实现多设备共享。下面的教程是自己一步步摸索过来的，为脚本原作者的说明进行详细的阐释，提供给后面的学弟学妹，希望能让大家少走一些弯路。
 
