@@ -1,4 +1,5 @@
 # 广东电信天翼校园网自动认证教程
+（广东电信天翼校园（ZSM验证）登入认证脚本详细教程。破解校园网多设备限制，每日自动认证登陆，软路由零基础搭建教程。成功实例：GDPU 校园网 ）
 
 ![GitHub License](https://img.shields.io/github/license/EricZhou05/ESurfingDialerTutorial)
 
